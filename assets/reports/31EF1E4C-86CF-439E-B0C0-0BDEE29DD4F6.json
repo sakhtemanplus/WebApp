@@ -1,0 +1,769 @@
+{
+  "ReportVersion": "2018.3.3",
+  "ReportGuid": "5ede20379b1c2aac12ef4e7faed202eb",
+  "ReportName": "Report",
+  "ReportAlias": "Report",
+  "ReportFile": "31EF1E4C-86CF-439E-B0C0-0BDEE29DD4F6.json.mrt",
+  "ReportCreated": "/Date(55800000+0330)/",
+  "ReportChanged": "/Date(55800000+0330)/",
+  "EngineVersion": "EngineV2",
+  "CalculationMode": "Interpretation",
+  "ReportUnit": "Centimeters",
+  "Styles": {
+    "0": {
+      "Ident": "StiStyle",
+      "CollectionName": "Gray 25%",
+      "Conditions": {
+        "0": {
+          "Ident": "StiStyleCondition",
+          "Type": "ComponentType, Placement, PlacementNestedLevel",
+          "Placement": "ReportTitle",
+          "ComponentType": "Text, Primitive, Image, CheckBox"
+        }
+      },
+      "Name": "Gray 25%_Report_Title1",
+      "Font": ";14;Bold;",
+      "Border": ";110,110,110;;;;;;solid:Black",
+      "Brush": "solid:Transparent",
+      "TextBrush": "solid:10,10,10"
+    },
+    "1": {
+      "Ident": "StiStyle",
+      "CollectionName": "Gray 25%",
+      "Conditions": {
+        "0": {
+          "Ident": "StiStyleCondition",
+          "Type": "ComponentType, Placement, PlacementNestedLevel",
+          "OperationPlacementNestedLevel": "GreaterThanOrEqualTo",
+          "Placement": "ReportTitle",
+          "PlacementNestedLevel": 2,
+          "ComponentType": "Text, Primitive, Image, CheckBox"
+        }
+      },
+      "Name": "Gray 25%_Report_Title2",
+      "Font": ";10;Bold;",
+      "Border": ";110,110,110;;;;;;solid:Black",
+      "Brush": "solid:Transparent",
+      "TextBrush": "solid:10,10,10"
+    },
+    "2": {
+      "Ident": "StiStyle",
+      "CollectionName": "Gray 25%",
+      "Conditions": {
+        "0": {
+          "Ident": "StiStyleCondition",
+          "Type": "ComponentType, Placement, PlacementNestedLevel",
+          "Placement": "ReportSummary",
+          "ComponentType": "Text, Primitive, Image, CheckBox"
+        }
+      },
+      "Name": "Gray 25%_Report_Summary1",
+      "Font": ";12;Bold;",
+      "Border": ";110,110,110;;;;;;solid:Black",
+      "Brush": "solid:Transparent",
+      "TextBrush": "solid:10,10,10"
+    },
+    "3": {
+      "Ident": "StiStyle",
+      "CollectionName": "Gray 25%",
+      "Conditions": {
+        "0": {
+          "Ident": "StiStyleCondition",
+          "Type": "ComponentType, Placement, PlacementNestedLevel",
+          "OperationPlacementNestedLevel": "GreaterThanOrEqualTo",
+          "Placement": "ReportSummary",
+          "PlacementNestedLevel": 2,
+          "ComponentType": "Text, Primitive, Image, CheckBox"
+        }
+      },
+      "Name": "Gray 25%_Report_Summary2",
+      "Font": ";10;Bold;",
+      "Border": ";110,110,110;;;;;;solid:Black",
+      "Brush": "solid:Transparent",
+      "TextBrush": "solid:10,10,10"
+    },
+    "4": {
+      "Ident": "StiStyle",
+      "CollectionName": "Gray 25%",
+      "Conditions": {
+        "0": {
+          "Ident": "StiStyleCondition",
+          "Type": "ComponentType, Placement",
+          "Placement": "PageHeader",
+          "ComponentType": "Text, Primitive, Image, CheckBox"
+        }
+      },
+      "Name": "Gray 25%_Page_Header",
+      "Font": ";10;;",
+      "Border": ";110,110,110;;;;;;solid:Black",
+      "Brush": "solid:Transparent",
+      "TextBrush": "solid:10,10,10"
+    },
+    "5": {
+      "Ident": "StiStyle",
+      "CollectionName": "Gray 25%",
+      "Conditions": {
+        "0": {
+          "Ident": "StiStyleCondition",
+          "Type": "ComponentType, Placement",
+          "Placement": "PageFooter",
+          "ComponentType": "Text, Primitive, Image, CheckBox"
+        }
+      },
+      "Name": "Gray 25%_Page_Footer",
+      "Font": ";10;;",
+      "Border": ";110,110,110;;;;;;solid:Black",
+      "Brush": "solid:Transparent",
+      "TextBrush": "solid:10,10,10"
+    },
+    "6": {
+      "Ident": "StiStyle",
+      "CollectionName": "Gray 25%",
+      "Conditions": {
+        "0": {
+          "Ident": "StiStyleCondition",
+          "Type": "ComponentType, Placement, PlacementNestedLevel",
+          "OperationPlacementNestedLevel": "GreaterThanOrEqualTo",
+          "Placement": "GroupHeader",
+          "ComponentType": "Text, Primitive, Image, CheckBox"
+        }
+      },
+      "Name": "Gray 25%_Group_Header1",
+      "Font": ";13;Bold;",
+      "Border": ";110,110,110;;;;;;solid:Black",
+      "Brush": "solid:Transparent",
+      "TextBrush": "solid:60,60,60",
+      "AllowUseBorderSidesFromLocation": true
+    },
+    "7": {
+      "Ident": "StiStyle",
+      "CollectionName": "Gray 25%",
+      "Conditions": {
+        "0": {
+          "Ident": "StiStyleCondition",
+          "Type": "ComponentType, Placement, PlacementNestedLevel",
+          "Placement": "GroupFooter",
+          "ComponentType": "Text, Primitive, Image, CheckBox"
+        }
+      },
+      "Name": "Gray 25%_Group_Footer1",
+      "Font": ";13;Bold;",
+      "Border": ";110,110,110;;;;;;solid:Black",
+      "Brush": "solid:Transparent",
+      "TextBrush": "solid:60,60,60",
+      "AllowUseBorderSidesFromLocation": true
+    },
+    "8": {
+      "Ident": "StiStyle",
+      "CollectionName": "Gray 25%",
+      "Conditions": {
+        "0": {
+          "Ident": "StiStyleCondition",
+          "Type": "ComponentType, Placement, PlacementNestedLevel",
+          "OperationPlacementNestedLevel": "GreaterThanOrEqualTo",
+          "Placement": "Header",
+          "ComponentType": "Text, Primitive, Image, CheckBox"
+        }
+      },
+      "Name": "Gray 25%_Header1",
+      "Font": ";;Bold;",
+      "Border": ";110,110,110;;;;;true;solid:Black",
+      "Brush": "solid:210,210,210",
+      "TextBrush": "solid:10,10,10",
+      "AllowUseBorderSidesFromLocation": true
+    },
+    "9": {
+      "Ident": "StiStyle",
+      "CollectionName": "Gray 25%",
+      "Conditions": {
+        "0": {
+          "Ident": "StiStyleCondition",
+          "Type": "ComponentType, Placement, PlacementNestedLevel",
+          "OperationPlacementNestedLevel": "GreaterThanOrEqualTo",
+          "Placement": "Data",
+          "ComponentType": "Text, Primitive, Image, CheckBox"
+        }
+      },
+      "Name": "Gray 25%_Data1",
+      "Border": ";110,110,110;;;;;true;solid:Black",
+      "Brush": "solid:Transparent",
+      "TextBrush": "solid:10,10,10",
+      "AllowUseBorderSidesFromLocation": true
+    },
+    "10": {
+      "Ident": "StiStyle",
+      "CollectionName": "Gray 25%",
+      "Conditions": {
+        "0": {
+          "Ident": "StiStyleCondition",
+          "Type": "Placement, PlacementNestedLevel",
+          "OperationPlacementNestedLevel": "GreaterThanOrEqualTo",
+          "Placement": "DataOddStyle"
+        }
+      },
+      "Name": "Gray 25%_Data1_Odd Style",
+      "Border": ";110,110,110;;;;;true;solid:Black",
+      "Brush": "solid:255,255,255",
+      "TextBrush": "solid:10,10,10",
+      "AllowUseBorderSidesFromLocation": true
+    },
+    "11": {
+      "Ident": "StiStyle",
+      "CollectionName": "Gray 25%",
+      "Conditions": {
+        "0": {
+          "Ident": "StiStyleCondition",
+          "Type": "Placement, PlacementNestedLevel",
+          "OperationPlacementNestedLevel": "GreaterThanOrEqualTo",
+          "Placement": "DataEvenStyle"
+        }
+      },
+      "Name": "Gray 25%_Data1_Even Style",
+      "Border": ";110,110,110;;;;;true;solid:Black",
+      "Brush": "solid:255,255,255",
+      "TextBrush": "solid:10,10,10",
+      "AllowUseBorderSidesFromLocation": true
+    },
+    "12": {
+      "Ident": "StiStyle",
+      "CollectionName": "Gray 25%",
+      "Conditions": {
+        "0": {
+          "Ident": "StiStyleCondition",
+          "Type": "ComponentType, Placement, PlacementNestedLevel",
+          "Placement": "Footer",
+          "ComponentType": "Text, Primitive, Image, CheckBox"
+        }
+      },
+      "Name": "Gray 25%_Footer1",
+      "Border": ";110,110,110;;;;;true;solid:Black",
+      "Brush": "solid:230,230,230",
+      "TextBrush": "solid:10,10,10",
+      "AllowUseBorderSidesFromLocation": true
+    }
+  },
+  "Dictionary": {
+    "Variables": {
+      "0": {
+        "Value": "تاریخ: بین 1396/12/29 الی 1397/12/29",
+        "Name": "DomainsDescription",
+        "Alias": "DomainsDescription",
+        "Type": "System.String",
+        "Category": "report"
+      }
+    },
+    "DataSources": {
+      "0": {
+        "Ident": "StiDataTableSource",
+        "Name": "UnitBillingPerUnit",
+        "Alias": "UnitBillingPerUnit",
+        "Columns": {
+          "0": {
+            "Name": "AccountingDocumentBodyId",
+            "Index": -1,
+            "NameInSource": "AccountingDocumentBodyId",
+            "Alias": "AccountingDocumentBodyId",
+            "Type": "System.Decimal"
+          },
+          "1": {
+            "Name": "UnitId",
+            "Index": -1,
+            "NameInSource": "UnitId",
+            "Alias": "UnitId",
+            "Type": "System.Decimal"
+          },
+          "2": {
+            "Name": "Date",
+            "Index": -1,
+            "NameInSource": "Date",
+            "Alias": "Date",
+            "Type": "System.String"
+          },
+          "3": {
+            "Name": "Description",
+            "Index": -1,
+            "NameInSource": "Description",
+            "Alias": "Description",
+            "Type": "System.String"
+          },
+          "4": {
+            "Name": "Credit",
+            "Index": -1,
+            "NameInSource": "Credit",
+            "Alias": "Credit",
+            "Type": "System.Decimal"
+          },
+          "5": {
+            "Name": "Debit",
+            "Index": -1,
+            "NameInSource": "Debit",
+            "Alias": "Debit",
+            "Type": "System.Decimal"
+          },
+          "6": {
+            "Name": "Remain",
+            "Index": -1,
+            "NameInSource": "Remain",
+            "Alias": "Remain",
+            "Type": "System.Decimal"
+          }
+        },
+        "NameInSource": "UnitBillingPerUnit.UnitBillingPerUnit"
+      }
+    }
+  },
+  "Pages": {
+    "0": {
+      "Ident": "StiPage",
+      "Name": "Page1",
+      "Guid": "b469c357be174a65a68f52e84fe23db2",
+      "Interaction": {
+        "Ident": "StiInteraction"
+      },
+      "Border": ";;2;;;;;solid:Black",
+      "Brush": "solid:Transparent",
+      "Components": {
+        "0": {
+          "Ident": "StiReportTitleBand",
+          "Name": "ReportTitle",
+          "ClientRectangle": "0,0.4,19,1.4",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:Transparent",
+          "Components": {
+            "0": {
+              "Ident": "StiText",
+              "Name": "ReportTitleText",
+              "GrowToHeight": true,
+              "ClientRectangle": "0,0,19,1.4",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "واحدها123"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": "IRANSansFaNum;14;Bold;",
+              "Border": ";110,110,110;;;;;;solid:Black",
+              "Brush": "solid:Transparent",
+              "TextBrush": "solid:10,10,10",
+              "Type": "Expression"
+            }
+          }
+        },
+        "1": {
+          "Ident": "StiHeaderBand",
+          "Name": "HeaderUnitBillingPerUnit",
+          "ClientRectangle": "0,2.6,19,0.6",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:Transparent",
+          "Components": {
+            "0": {
+              "Ident": "StiText",
+              "Name": "HeaderTextUnitBillingPerUnit1",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "0,0,3.2,0.6",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "مانده"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": "IRANSansFaNum;10;Bold;",
+              "Border": "All;110,110,110;;;;;true;solid:0,0,0",
+              "Brush": "solid:210,210,210",
+              "TextBrush": "solid:10,10,10",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "Type": "Expression"
+            },
+            "1": {
+              "Ident": "StiText",
+              "Name": "HeaderTextUnitBillingPerUnit2",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "3.2,0,3.2,0.6",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "بدهکار"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": "IRANSansFaNum;10;Bold;",
+              "Border": "All;110,110,110;;;;;true;solid:0,0,0",
+              "Brush": "solid:210,210,210",
+              "TextBrush": "solid:10,10,10",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "Type": "Expression"
+            },
+            "2": {
+              "Ident": "StiText",
+              "Name": "HeaderTextUnitBillingPerUnit3",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "6.4,0,3.2,0.6",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "بستانکار"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": "IRANSansFaNum;10;Bold;",
+              "Border": "All;110,110,110;;;;;true;solid:0,0,0",
+              "Brush": "solid:210,210,210",
+              "TextBrush": "solid:10,10,10",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "Type": "Expression"
+            },
+            "3": {
+              "Ident": "StiText",
+              "Name": "HeaderTextUnitBillingPerUnit4",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "9.6,0,5.8,0.6",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "شرح"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": "IRANSansFaNum;10;Bold;",
+              "Border": "All;110,110,110;;;;;true;solid:0,0,0",
+              "Brush": "solid:210,210,210",
+              "TextBrush": "solid:10,10,10",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "Type": "Expression"
+            },
+            "4": {
+              "Ident": "StiText",
+              "Name": "HeaderTextUnitBillingPerUnit5",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "15.4,0,2.2,0.6",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "تاریخ"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": "IRANSansFaNum;10;Bold;",
+              "Border": "All;110,110,110;;;;;true;solid:0,0,0",
+              "Brush": "solid:210,210,210",
+              "TextBrush": "solid:10,10,10",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "Type": "Expression"
+            },
+            "5": {
+              "Ident": "StiText",
+              "Name": "HeaderTextUnitBillingPerUnit6",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "17.6,0,1.4,0.6",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "ردیف"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": "IRANSansFaNum;10;Bold;",
+              "Border": "All;110,110,110;;;;;true;solid:0,0,0",
+              "Brush": "solid:210,210,210",
+              "TextBrush": "solid:10,10,10",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "Type": "Expression"
+            }
+          }
+        },
+        "2": {
+          "Ident": "StiGroupHeaderBand",
+          "Name": "GroupHeaderBand1",
+          "ClientRectangle": "0,4,19,0.4",
+          "Interaction": {
+            "Ident": "StiBandInteraction"
+          },
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:Transparent",
+          "Condition": {
+            "Value": "{UnitBillingPerUnit.UnitId}"
+          }
+        },
+        "3": {
+          "Ident": "StiDataBand",
+          "Name": "DataUnitBillingPerUnit",
+          "ClientRectangle": "0,5.2,19,0.6",
+          "Interaction": {
+            "Ident": "StiBandInteraction"
+          },
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:Transparent",
+          "Components": {
+            "0": {
+              "Ident": "StiText",
+              "Name": "DataTextUnitBillingPerUnit1",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "0,0,3.2,0.6",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{UnitBillingPerUnit.Remain}"
+              },
+              "VertAlignment": "Center",
+              "Font": "IRANSansFaNum;10;;",
+              "Border": "All;110,110,110;;;;;true;solid:0,0,0",
+              "Brush": "solid:Transparent",
+              "TextBrush": "solid:10,10,10",
+              "TextOptions": {
+                "RightToLeft": true,
+                "WordWrap": true
+              },
+              "TextQuality": "Wysiwyg",
+              "Margins": {
+                "Left": 4,
+                "Right": 4,
+                "Top": 0,
+                "Bottom": 0
+              },
+              "TextFormat": {
+                "Ident": "StiNumberFormatService",
+                "NegativePattern": 0,
+                "DecimalDigits": 0,
+                "GroupSeparator": ",",
+                "State": "DecimalDigits, GroupSeparator, NegativePattern"
+              }
+            },
+            "1": {
+              "Ident": "StiText",
+              "Name": "DataTextUnitBillingPerUnit2",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "3.2,0,3.2,0.6",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{UnitBillingPerUnit.Debit}"
+              },
+              "VertAlignment": "Center",
+              "Font": "IRANSansFaNum;10;;",
+              "Border": "All;110,110,110;;;;;true;solid:0,0,0",
+              "Brush": "solid:Transparent",
+              "TextBrush": "solid:10,10,10",
+              "TextOptions": {
+                "RightToLeft": true,
+                "WordWrap": true
+              },
+              "TextQuality": "Wysiwyg",
+              "Margins": {
+                "Left": 4,
+                "Right": 4,
+                "Top": 0,
+                "Bottom": 0
+              },
+              "TextFormat": {
+                "Ident": "StiNumberFormatService",
+                "NegativePattern": 0,
+                "DecimalDigits": 0,
+                "GroupSeparator": ",",
+                "State": "DecimalDigits, GroupSeparator, NegativePattern"
+              }
+            },
+            "2": {
+              "Ident": "StiText",
+              "Name": "DataTextUnitBillingPerUnit3",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "6.4,0,3.2,0.6",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{UnitBillingPerUnit.Credit}"
+              },
+              "VertAlignment": "Center",
+              "Font": "IRANSansFaNum;10;;",
+              "Border": "All;110,110,110;;;;;true;solid:0,0,0",
+              "Brush": "solid:Transparent",
+              "TextBrush": "solid:10,10,10",
+              "TextOptions": {
+                "RightToLeft": true,
+                "WordWrap": true
+              },
+              "TextQuality": "Wysiwyg",
+              "Margins": {
+                "Left": 4,
+                "Right": 4,
+                "Top": 0,
+                "Bottom": 0
+              },
+              "TextFormat": {
+                "Ident": "StiNumberFormatService",
+                "NegativePattern": 0,
+                "DecimalDigits": 0,
+                "GroupSeparator": ",",
+                "State": "DecimalDigits, GroupSeparator, NegativePattern"
+              }
+            },
+            "3": {
+              "Ident": "StiText",
+              "Name": "DataTextUnitBillingPerUnit4",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "9.6,0,5.8,0.6",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{Persian(UnitBillingPerUnit.Description)}"
+              },
+              "VertAlignment": "Center",
+              "Font": "IRANSansFaNum;10;;",
+              "Border": "All;110,110,110;;;;;true;solid:0,0,0",
+              "Brush": "solid:Transparent",
+              "TextBrush": "solid:10,10,10",
+              "TextOptions": {
+                "RightToLeft": true,
+                "WordWrap": true
+              },
+              "TextQuality": "Wysiwyg",
+              "Margins": {
+                "Left": 4,
+                "Right": 4,
+                "Top": 0,
+                "Bottom": 0
+              },
+              "Type": "Expression"
+            },
+            "4": {
+              "Ident": "StiText",
+              "Name": "DataTextUnitBillingPerUnit5",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "15.4,0,2.2,0.6",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{Persian(MiladiDateToPersianDateStr(UnitBillingPerUnit.Date))}"
+              },
+              "VertAlignment": "Center",
+              "Font": "IRANSansFaNum;10;;",
+              "Border": "All;110,110,110;;;;;true;solid:0,0,0",
+              "Brush": "solid:Transparent",
+              "TextBrush": "solid:10,10,10",
+              "TextOptions": {
+                "RightToLeft": true,
+                "WordWrap": true
+              },
+              "TextQuality": "Wysiwyg",
+              "Margins": {
+                "Left": 4,
+                "Right": 4,
+                "Top": 0,
+                "Bottom": 0
+              },
+              "Type": "Expression"
+            },
+            "5": {
+              "Ident": "StiText",
+              "Name": "DataTextUnitBillingPerUnit6",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "17.6,0,1.4,0.6",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{Line}"
+              },
+              "VertAlignment": "Center",
+              "Font": "IRANSansFaNum;10;;",
+              "Border": "All;110,110,110;;;;;true;solid:0,0,0",
+              "Brush": "solid:Transparent",
+              "TextBrush": "solid:10,10,10",
+              "TextOptions": {
+                "RightToLeft": true,
+                "WordWrap": true
+              },
+              "TextQuality": "Wysiwyg",
+              "Margins": {
+                "Left": 4,
+                "Right": 4,
+                "Top": 0,
+                "Bottom": 0
+              },
+              "Type": "Expression"
+            }
+          },
+          "DataSourceName": "UnitBillingPerUnit",
+          "FilterMode": "Or",
+          "EvenStyle": "Gray 25%_Data1_Even Style",
+          "OddStyle": "Gray 25%_Data1_Odd Style"
+        },
+        "4": {
+          "Ident": "StiFooterBand",
+          "Name": "FooterUnitBillingPerUnit",
+          "ClientRectangle": "0,6.6,19,0.6",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:Transparent",
+          "PrintIfEmpty": true
+        },
+        "5": {
+          "Ident": "StiGroupFooterBand",
+          "Name": "GroupFooterBand1",
+          "ClientRectangle": "0,8,19,0.8",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:Transparent"
+        }
+      },
+      "PageWidth": 21,
+      "PageHeight": 29.7,
+      "Watermark": {
+        "TextBrush": "solid:50,0,0,0"
+      },
+      "Margins": {
+        "Left": 1,
+        "Right": 1,
+        "Top": 1,
+        "Bottom": 1
+      }
+    }
+  }
+}
