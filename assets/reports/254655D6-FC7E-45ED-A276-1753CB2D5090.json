@@ -1,11 +1,11 @@
 {
   "ReportVersion": "2019.1.1",
-  "ReportGuid": "6e3de26c297965c9eda44b6d2095c6d2",
+  "ReportGuid": "cfa65af695aacd1301c29b8947217cfd",
   "ReportName": "Report",
   "ReportAlias": "Report",
-  "ReportFile": "31EF1E4C-86CF-439E-B0C0-0BDEE29DD4F6.json.mrt",
-  "ReportCreated": "/Date(144000000+0330)/",
-  "ReportChanged": "/Date(144000000+0330)/",
+  "ReportFile": "254655D6-FC7E-45ED-A276-1753CB2D5090.json.mrt",
+  "ReportCreated": "/Date(307800000+0330)/",
+  "ReportChanged": "/Date(307800000+0330)/",
   "EngineVersion": "EngineV2",
   "CalculationMode": "Interpretation",
   "ReportUnit": "Centimeters",
@@ -261,41 +261,77 @@
       },
       "2": {
         "Value": "بستانکار",
-        "Name": "Credit",
+        "Name": "CreditStr",
         "DialogInfo": {
           "DateTimeType": "DateAndTime"
         },
-        "Alias": "Credit",
+        "Alias": "CreditStr",
         "Type": "System.String",
         "ReadOnly": true,
         "Category": "Local"
       },
       "3": {
-        "Value": "بدهکار",
-        "Name": "Debit",
+        "Value": "UnitBillingBriefly.BeforeRemainCreditAmount-UnitBillingBriefly.BeforeRemainDebitAmount",
+        "Name": "BeforeRemain",
         "DialogInfo": {
           "DateTimeType": "DateAndTime"
         },
-        "Alias": "Debit",
+        "Alias": "BeforeRemain",
+        "Type": "System.String",
+        "ReadOnly": true,
+        "Category": "Local",
+        "InitBy": "Expression"
+      },
+      "4": {
+        "Value": "(UnitBillingBriefly.BeforeRemainCreditAmount-UnitBillingBriefly.BeforeRemainDebitAmount)+(UnitBillingBriefly.CurrentCreditAmount-UnitBillingBriefly.CurrentDebitAmount)",
+        "Name": "TotalRemain",
+        "DialogInfo": {
+          "DateTimeType": "DateAndTime"
+        },
+        "Alias": "TotalRemain",
+        "Type": "System.String",
+        "ReadOnly": true,
+        "Category": "Local",
+        "InitBy": "Expression"
+      },
+      "5": {
+        "Value": "UnitBillingBriefly.CurrentCreditAmount-UnitBillingBriefly.CurrentDebitAmount",
+        "Name": "CurrentRemain",
+        "DialogInfo": {
+          "DateTimeType": "DateAndTime"
+        },
+        "Alias": "CurrentRemain",
+        "Type": "System.String",
+        "ReadOnly": true,
+        "Category": "Local",
+        "InitBy": "Expression"
+      },
+      "6": {
+        "Value": "بدهکار",
+        "Name": "DebitStr",
+        "DialogInfo": {
+          "DateTimeType": "DateAndTime"
+        },
+        "Alias": "DebitStr",
         "Type": "System.String",
         "ReadOnly": true,
         "Category": "Local"
       },
-      "4": {
-        "Value": "تاریخ: بین 1398/03/12 الی 1398/03/12",
+      "7": {
+        "Value": "تاریخ: بین 1398/04/04 الی 1398/04/04",
         "Name": "DomainsDescription",
         "Alias": "DomainsDescription",
         "Type": "System.String",
         "Category": "report"
       },
-      "5": {
+      "8": {
         "Value": "1398/03/10",
         "Name": "PrintDate",
         "Alias": "print Date (execution date)",
         "Type": "System.String",
         "Category": "report"
       },
-      "6": {
+      "9": {
         "Value": "ریال",
         "Name": "CurrencyName",
         "Alias": "CurrencyName",
@@ -307,74 +343,67 @@
     "DataSources": {
       "0": {
         "Ident": "StiDataTableSource",
-        "Name": "UnitBillingPerUnit",
-        "Alias": "UnitBillingPerUnit",
+        "Name": "UnitBillingBriefly",
+        "Alias": "UnitBillingBriefly",
         "Columns": {
           "0": {
-            "Name": "AccountingDocumentBodyId",
-            "Index": -1,
-            "NameInSource": "AccountingDocumentBodyId",
-            "Alias": "AccountingDocumentBodyId",
-            "Type": "System.Decimal"
-          },
-          "1": {
             "Name": "UnitId",
             "Index": -1,
             "NameInSource": "UnitId",
             "Alias": "UnitId",
             "Type": "System.Decimal"
           },
-          "2": {
+          "1": {
             "Name": "UnitNumber",
             "Index": -1,
             "NameInSource": "UnitNumber",
             "Alias": "UnitNumber",
             "Type": "System.String"
           },
-          "3": {
+          "2": {
             "Name": "UnitDescription",
             "Index": -1,
             "NameInSource": "UnitDescription",
             "Alias": "UnitDescription",
             "Type": "System.String"
           },
-          "4": {
-            "Name": "Date",
+          "3": {
+            "Name": "BeforeRemainCreditAmount",
             "Index": -1,
-            "NameInSource": "Date",
-            "Alias": "Date",
-            "Type": "System.String"
+            "NameInSource": "BeforeRemainCreditAmount",
+            "Alias": "BeforeRemainCreditAmount",
+            "Type": "System.Decimal"
+          },
+          "4": {
+            "Name": "BeforeRemainDebitAmount",
+            "Index": -1,
+            "NameInSource": "BeforeRemainDebitAmount",
+            "Alias": "BeforeRemainDebitAmount",
+            "Type": "System.Decimal"
           },
           "5": {
-            "Name": "Description",
+            "Name": "CurrentCreditAmount",
             "Index": -1,
-            "NameInSource": "Description",
-            "Alias": "Description",
-            "Type": "System.String"
+            "NameInSource": "CurrentCreditAmount",
+            "Alias": "CurrentCreditAmount",
+            "Type": "System.Decimal"
           },
           "6": {
-            "Name": "Credit",
+            "Name": "CurrentDebitAmount",
             "Index": -1,
-            "NameInSource": "Credit",
-            "Alias": "Credit",
+            "NameInSource": "CurrentDebitAmount",
+            "Alias": "CurrentDebitAmount",
             "Type": "System.Decimal"
           },
           "7": {
-            "Name": "Debit",
+            "Name": "RemainAmount",
             "Index": -1,
-            "NameInSource": "Debit",
-            "Alias": "Debit",
-            "Type": "System.Decimal"
-          },
-          "8": {
-            "Name": "Remain",
-            "Index": -1,
-            "NameInSource": "Remain",
-            "Alias": "Remain",
+            "NameInSource": "RemainAmount",
+            "Alias": "RemainAmount",
             "Type": "System.Decimal"
           }
         },
-        "NameInSource": "UnitBillingPerUnit.UnitBillingPerUnit"
+        "NameInSource": "UnitBillingBriefly.UnitBillingBriefly"
       }
     }
   },
@@ -409,7 +438,7 @@
               },
               "Editable": true,
               "Text": {
-                "Value": "صورتحساب واحد"
+                "Value": "خلاصه صورت وضعیت واحدها"
               },
               "HorAlignment": "Center",
               "VertAlignment": "Center",
@@ -423,14 +452,14 @@
               "Ident": "StiText",
               "Name": "Text2",
               "Guid": "1fc23a21339eade255cbef66eeeb34c6",
-              "ClientRectangle": "0,0.1,5.2,0.4",
+              "ClientRectangle": "0.1,0.1,5.2,0.4",
               "Interaction": {
                 "Ident": "StiInteraction"
               },
               "Text": {
                 "Value": "صفحه {PageNumber} از {TotalPageCount}"
               },
-              "VertAlignment": "Bottom",
+              "VertAlignment": "Center",
               "Font": "IRANSansFaNum;10;;",
               "Border": ";110,110,110;;;;;;solid:Black",
               "Brush": "solid:Transparent",
@@ -460,62 +489,45 @@
                 "WordWrap": true
               },
               "Type": "Expression"
+            },
+            "3": {
+              "Ident": "StiText",
+              "Name": "Text1",
+              "Guid": "b58e28723eea47f4a7157776463e2ac9",
+              "ClientRectangle": "14.7,0.1,5.2,0.4",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "چاپ:{PrintDate}"
+              },
+              "HorAlignment": "Right",
+              "VertAlignment": "Center",
+              "Font": "IRANSansFaNum;10;;",
+              "Border": ";110,110,110;;;;;;solid:Black",
+              "Brush": "solid:Transparent",
+              "TextBrush": "solid:10,10,10",
+              "Type": "Expression"
             }
           }
         },
         "1": {
           "Ident": "StiGroupHeaderBand",
           "Name": "GroupHeaderBand1",
-          "ClientRectangle": "0,2.3,20,0.6",
+          "ClientRectangle": "0,2.3,20,0",
           "Interaction": {
             "Ident": "StiBandInteraction"
           },
           "Border": ";;;;;;;solid:Black",
           "Brush": "solid:Transparent",
-          "Components": {
-            "0": {
-              "Ident": "StiText",
-              "Name": "Text1",
-              "Guid": "d395b0d8bde0c3cd31bfd63f84cec8ab",
-              "CanGrow": true,
-              "GrowToHeight": true,
-              "ClientRectangle": "0,0,20,0.6",
-              "Interaction": {
-                "Ident": "StiInteraction"
-              },
-              "Text": {
-                "Value": "واحد شماره : {UnitBillingPerUnit.UnitNumber}"
-              },
-              "VertAlignment": "Center",
-              "Font": "IRANSansFaNum;10;;",
-              "Border": "All;110,110,110;;;;;true;solid:0,0,0",
-              "Brush": "solid:Transparent",
-              "TextBrush": "solid:10,10,10",
-              "TextOptions": {
-                "RightToLeft": true,
-                "WordWrap": true
-              },
-              "TextQuality": "Wysiwyg",
-              "Margins": {
-                "Left": 4,
-                "Right": 4,
-                "Top": 0,
-                "Bottom": 0
-              },
-              "Type": "Expression"
-            }
-          },
           "ResetPageNumber": true,
           "NewPageBefore": true,
-          "PrintOnAllPages": true,
-          "Condition": {
-            "Value": "{UnitBillingPerUnit.UnitId}"
-          }
+          "PrintOnAllPages": true
         },
         "2": {
           "Ident": "StiChildBand",
           "Name": "ChildBand1",
-          "ClientRectangle": "0,3.7,20,0.6",
+          "ClientRectangle": "0,3.1,20,1.2",
           "Interaction": {
             "Ident": "StiInteraction"
           },
@@ -524,16 +536,16 @@
           "Components": {
             "0": {
               "Ident": "StiText",
-              "Name": "HeaderTextUnitBillingPerUnit2",
-              "Guid": "61e17219b67b339598056e5bcbe2107f",
+              "Name": "HeaderTextUnitBillingPerUnit5",
+              "Guid": "fcc9b6c57fd6a608559c8aab082bf98b",
               "CanGrow": true,
               "GrowToHeight": true,
-              "ClientRectangle": "3.6,0,3.2,0.6",
+              "ClientRectangle": "16,0,2.6,1.2",
               "Interaction": {
                 "Ident": "StiInteraction"
               },
               "Text": {
-                "Value": "بدهکار"
+                "Value": "واحد"
               },
               "HorAlignment": "Center",
               "VertAlignment": "Center",
@@ -548,83 +560,11 @@
             },
             "1": {
               "Ident": "StiText",
-              "Name": "HeaderTextUnitBillingPerUnit3",
-              "Guid": "bbb4f8558f62545a916a7734b2384d4b",
-              "CanGrow": true,
-              "GrowToHeight": true,
-              "ClientRectangle": "6.8,0,3.2,0.6",
-              "Interaction": {
-                "Ident": "StiInteraction"
-              },
-              "Text": {
-                "Value": "بستانکار"
-              },
-              "HorAlignment": "Center",
-              "VertAlignment": "Center",
-              "Font": "IRANSansFaNum;10;Bold;",
-              "Border": "All;110,110,110;;;;;true;solid:0,0,0",
-              "Brush": "solid:210,210,210",
-              "TextBrush": "solid:10,10,10",
-              "TextOptions": {
-                "WordWrap": true
-              },
-              "Type": "Expression"
-            },
-            "2": {
-              "Ident": "StiText",
-              "Name": "HeaderTextUnitBillingPerUnit4",
-              "Guid": "f2ebf4c4b6289743525c6ecc4d1e1599",
-              "CanGrow": true,
-              "GrowToHeight": true,
-              "ClientRectangle": "10,0,6.4,0.6",
-              "Interaction": {
-                "Ident": "StiInteraction"
-              },
-              "Text": {
-                "Value": "شرح"
-              },
-              "HorAlignment": "Center",
-              "VertAlignment": "Center",
-              "Font": "IRANSansFaNum;10;Bold;",
-              "Border": "All;110,110,110;;;;;true;solid:0,0,0",
-              "Brush": "solid:210,210,210",
-              "TextBrush": "solid:10,10,10",
-              "TextOptions": {
-                "WordWrap": true
-              },
-              "Type": "Expression"
-            },
-            "3": {
-              "Ident": "StiText",
-              "Name": "HeaderTextUnitBillingPerUnit5",
-              "Guid": "fcc9b6c57fd6a608559c8aab082bf98b",
-              "CanGrow": true,
-              "GrowToHeight": true,
-              "ClientRectangle": "16.4,0,2.2,0.6",
-              "Interaction": {
-                "Ident": "StiInteraction"
-              },
-              "Text": {
-                "Value": "تاریخ"
-              },
-              "HorAlignment": "Center",
-              "VertAlignment": "Center",
-              "Font": "IRANSansFaNum;10;Bold;",
-              "Border": "All;110,110,110;;;;;true;solid:0,0,0",
-              "Brush": "solid:210,210,210",
-              "TextBrush": "solid:10,10,10",
-              "TextOptions": {
-                "WordWrap": true
-              },
-              "Type": "Expression"
-            },
-            "4": {
-              "Ident": "StiText",
               "Name": "HeaderTextUnitBillingPerUnit6",
               "Guid": "ca3bd4d3f36bfa3cd96ae68033efe30c",
               "CanGrow": true,
               "GrowToHeight": true,
-              "ClientRectangle": "18.6,0,1.4,0.6",
+              "ClientRectangle": "18.6,0,1.4,1.2",
               "Interaction": {
                 "Ident": "StiInteraction"
               },
@@ -642,18 +582,42 @@
               },
               "Type": "Expression"
             },
-            "5": {
+            "2": {
               "Ident": "StiText",
-              "Name": "HeaderTextUnitBillingPerUnit1",
-              "Guid": "3553de98b9ec4db62eda7106dc61648c",
+              "Name": "Text6",
+              "Guid": "003ab340166df3de41e4d539a33bbf1c",
               "CanGrow": true,
               "GrowToHeight": true,
-              "ClientRectangle": "0,0,3.6,0.6",
+              "ClientRectangle": "10.6,0.6,1.8,0.6",
               "Interaction": {
                 "Ident": "StiInteraction"
               },
               "Text": {
-                "Value": "مانده({CurrencyName})"
+                "Value": "وضعیت"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": "IRANSansFaNum;10;Bold;",
+              "Border": "All;110,110,110;;;;;true;solid:0,0,0",
+              "Brush": "solid:210,210,210",
+              "TextBrush": "solid:10,10,10",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "Type": "Expression"
+            },
+            "3": {
+              "Ident": "StiText",
+              "Name": "Text7",
+              "Guid": "c0a8fc47fe9b9dadc9fdf7ff60df43fe",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "12.4,0.6,3.6,0.6",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "مبلغ-{CurrencyName}"
               },
               "HorAlignment": "Center",
               "VertAlignment": "Center",
@@ -663,6 +627,170 @@
               "TextBrush": "solid:10,10,10",
               "TextOptions": {
                 "RightToLeft": true,
+                "WordWrap": true
+              },
+              "Type": "Expression"
+            },
+            "4": {
+              "Ident": "StiText",
+              "Name": "HeaderTextUnitBillingPerUnit4",
+              "Guid": "f2ebf4c4b6289743525c6ecc4d1e1599",
+              "ClientRectangle": "10.6,0,5.4,0.6",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "مانده از قبل"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": "IRANSansFaNum;10;Bold;",
+              "Border": "All;110,110,110;;;;;true;solid:0,0,0",
+              "Brush": "solid:210,210,210",
+              "TextBrush": "solid:10,10,10",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "Type": "Expression"
+            },
+            "5": {
+              "Ident": "StiText",
+              "Name": "Text8",
+              "Guid": "88ff2e2cec1ecaadac36b4c1a6fd7e6a",
+              "ClientRectangle": "5.2,0,5.4,0.6",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "این دوره"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": "IRANSansFaNum;10;Bold;",
+              "Border": "All;110,110,110;;;;;true;solid:0,0,0",
+              "Brush": "solid:210,210,210",
+              "TextBrush": "solid:10,10,10",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "Type": "Expression"
+            },
+            "6": {
+              "Ident": "StiText",
+              "Name": "Text9",
+              "Guid": "a50d59631e624c7bd9379f40401e729e",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "7,0.6,3.6,0.6",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "مبلغ-{CurrencyName}"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": "IRANSansFaNum;10;Bold;",
+              "Border": "All;110,110,110;;;;;true;solid:0,0,0",
+              "Brush": "solid:210,210,210",
+              "TextBrush": "solid:10,10,10",
+              "TextOptions": {
+                "RightToLeft": true,
+                "WordWrap": true
+              },
+              "Type": "Expression"
+            },
+            "7": {
+              "Ident": "StiText",
+              "Name": "Text10",
+              "Guid": "2ff4c812731cf73a91134069fa8cd3b5",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "5.2,0.6,1.8,0.6",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "وضعیت"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": "IRANSansFaNum;10;Bold;",
+              "Border": "All;110,110,110;;;;;true;solid:0,0,0",
+              "Brush": "solid:210,210,210",
+              "TextBrush": "solid:10,10,10",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "Type": "Expression"
+            },
+            "8": {
+              "Ident": "StiText",
+              "Name": "Text13",
+              "Guid": "44285c84c2271d882a758e4f3e69b9a2",
+              "ClientRectangle": "0,0,5.2,0.6",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "مجموع"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": "IRANSansFaNum;10;Bold;",
+              "Border": "All;110,110,110;;;;;true;solid:0,0,0",
+              "Brush": "solid:210,210,210",
+              "TextBrush": "solid:10,10,10",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "Type": "Expression"
+            },
+            "9": {
+              "Ident": "StiText",
+              "Name": "Text14",
+              "Guid": "9fcd5ac60eb74978239c54f5255198db",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "1.8,0.6,3.4,0.6",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "مبلغ-{CurrencyName}"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": "IRANSansFaNum;10;Bold;",
+              "Border": "All;110,110,110;;;;;true;solid:0,0,0",
+              "Brush": "solid:210,210,210",
+              "TextBrush": "solid:10,10,10",
+              "TextOptions": {
+                "RightToLeft": true,
+                "WordWrap": true
+              },
+              "Type": "Expression"
+            },
+            "10": {
+              "Ident": "StiText",
+              "Name": "Text15",
+              "Guid": "0a97f6d018e755d20e161281525a9da3",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "0,0.6,1.8,0.6",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "وضعیت"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": "IRANSansFaNum;10;Bold;",
+              "Border": "All;110,110,110;;;;;true;solid:0,0,0",
+              "Brush": "solid:210,210,210",
+              "TextBrush": "solid:10,10,10",
+              "TextOptions": {
                 "WordWrap": true
               },
               "Type": "Expression"
@@ -685,12 +813,12 @@
               "Guid": "171d50f97629115a4d21300ebf0ea5d7",
               "CanGrow": true,
               "GrowToHeight": true,
-              "ClientRectangle": "3.6,0,3.2,0.6",
+              "ClientRectangle": "10.6,0,1.8,0.6",
               "Interaction": {
                 "Ident": "StiInteraction"
               },
               "Text": {
-                "Value": "{UnitBillingPerUnit.Debit}"
+                "Value": "{IIF(BeforeRemain == 0,BalancedStr,IIF(BeforeRemain>0,CreditStr,DebitStr))}"
               },
               "VertAlignment": "Center",
               "Font": "IRANSansFaNum;10;;",
@@ -714,7 +842,8 @@
                 "DecimalDigits": 0,
                 "GroupSeparator": ",",
                 "State": "DecimalDigits, GroupSeparator, NegativePattern"
-              }
+              },
+              "Type": "Expression"
             },
             "1": {
               "Ident": "StiText",
@@ -722,12 +851,12 @@
               "Guid": "27a69d4ae0d28d7e5026c6fa6c1d1231",
               "CanGrow": true,
               "GrowToHeight": true,
-              "ClientRectangle": "6.8,0,3.2,0.6",
+              "ClientRectangle": "12.4,0,3.6,0.6",
               "Interaction": {
                 "Ident": "StiInteraction"
               },
               "Text": {
-                "Value": "{UnitBillingPerUnit.Credit}"
+                "Value": "{BeforeRemain}"
               },
               "VertAlignment": "Center",
               "Font": "IRANSansFaNum;10;;",
@@ -751,51 +880,21 @@
                 "DecimalDigits": 0,
                 "GroupSeparator": ",",
                 "State": "DecimalDigits, GroupSeparator, NegativePattern"
-              }
-            },
-            "2": {
-              "Ident": "StiText",
-              "Name": "DataTextUnitBillingPerUnit4",
-              "Guid": "920f900505e2a9b3939181f3ac24471a",
-              "CanGrow": true,
-              "GrowToHeight": true,
-              "ClientRectangle": "10,0,6.4,0.6",
-              "Interaction": {
-                "Ident": "StiInteraction"
-              },
-              "Text": {
-                "Value": "{Persian(UnitBillingPerUnit.Description)}"
-              },
-              "VertAlignment": "Center",
-              "Font": "IRANSansFaNum;10;;",
-              "Border": "All;110,110,110;;;;;true;solid:0,0,0",
-              "Brush": "solid:Transparent",
-              "TextBrush": "solid:10,10,10",
-              "TextOptions": {
-                "RightToLeft": true,
-                "WordWrap": true
-              },
-              "TextQuality": "Wysiwyg",
-              "Margins": {
-                "Left": 4,
-                "Right": 4,
-                "Top": 0,
-                "Bottom": 0
               },
               "Type": "Expression"
             },
-            "3": {
+            "2": {
               "Ident": "StiText",
               "Name": "DataTextUnitBillingPerUnit5",
               "Guid": "073506850e4ee787b6e68c893a13517c",
               "CanGrow": true,
               "GrowToHeight": true,
-              "ClientRectangle": "16.4,0,2.2,0.6",
+              "ClientRectangle": "16,0,2.6,0.6",
               "Interaction": {
                 "Ident": "StiInteraction"
               },
               "Text": {
-                "Value": "{Persian(MiladiDateToPersianDateStr(UnitBillingPerUnit.Date))}"
+                "Value": "{UnitBillingBriefly.UnitNumber}"
               },
               "VertAlignment": "Center",
               "Font": "IRANSansFaNum;10;;",
@@ -813,9 +912,9 @@
                 "Top": 0,
                 "Bottom": 0
               },
-              "Type": "Expression"
+              "Type": "DataColumn"
             },
-            "4": {
+            "3": {
               "Ident": "StiText",
               "Name": "DataTextUnitBillingPerUnit6",
               "Guid": "31ef9b28f0e61c9897515567801ce745",
@@ -846,18 +945,18 @@
               },
               "Type": "Expression"
             },
-            "5": {
+            "4": {
               "Ident": "StiText",
-              "Name": "DataTextUnitBillingPerUnit1",
-              "Guid": "c8007f6c98ffadff48f74f5459e45e2e",
+              "Name": "Text11",
+              "Guid": "d2b22c479e5c3626ef0e07f4d42a68d3",
               "CanGrow": true,
               "GrowToHeight": true,
-              "ClientRectangle": "0,0,3.6,0.6",
+              "ClientRectangle": "5.2,0,1.8,0.6",
               "Interaction": {
                 "Ident": "StiInteraction"
               },
               "Text": {
-                "Value": "{UnitBillingPerUnit.Remain}"
+                "Value": "{IIF(CurrentRemain == 0,BalancedStr,IIF(CurrentRemain>0,CreditStr,DebitStr))}"
               },
               "VertAlignment": "Center",
               "Font": "IRANSansFaNum;10;;",
@@ -881,10 +980,125 @@
                 "DecimalDigits": 0,
                 "GroupSeparator": ",",
                 "State": "DecimalDigits, GroupSeparator, NegativePattern"
-              }
+              },
+              "Type": "Expression"
+            },
+            "5": {
+              "Ident": "StiText",
+              "Name": "Text12",
+              "Guid": "f3603334e85ca7f321baed4603adbbac",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "7,0,3.6,0.6",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{CurrentRemain}"
+              },
+              "VertAlignment": "Center",
+              "Font": "IRANSansFaNum;10;;",
+              "Border": "All;110,110,110;;;;;true;solid:0,0,0",
+              "Brush": "solid:Transparent",
+              "TextBrush": "solid:10,10,10",
+              "TextOptions": {
+                "RightToLeft": true,
+                "WordWrap": true
+              },
+              "TextQuality": "Wysiwyg",
+              "Margins": {
+                "Left": 4,
+                "Right": 4,
+                "Top": 0,
+                "Bottom": 0
+              },
+              "TextFormat": {
+                "Ident": "StiNumberFormatService",
+                "NegativePattern": 0,
+                "DecimalDigits": 0,
+                "GroupSeparator": ",",
+                "State": "DecimalDigits, GroupSeparator, NegativePattern"
+              },
+              "Type": "Expression"
+            },
+            "6": {
+              "Ident": "StiText",
+              "Name": "Text16",
+              "Guid": "96b215d06713a5347ae7c222c043b963",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "0,0,1.8,0.6",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{IIF(TotalRemain == 0,BalancedStr,IIF(TotalRemain>0,CreditStr,DebitStr))}"
+              },
+              "VertAlignment": "Center",
+              "Font": "IRANSansFaNum;10;;",
+              "Border": "All;110,110,110;;;;;true;solid:0,0,0",
+              "Brush": "solid:Transparent",
+              "TextBrush": "solid:10,10,10",
+              "TextOptions": {
+                "RightToLeft": true,
+                "WordWrap": true
+              },
+              "TextQuality": "Wysiwyg",
+              "Margins": {
+                "Left": 4,
+                "Right": 4,
+                "Top": 0,
+                "Bottom": 0
+              },
+              "TextFormat": {
+                "Ident": "StiNumberFormatService",
+                "NegativePattern": 0,
+                "DecimalDigits": 0,
+                "GroupSeparator": ",",
+                "State": "DecimalDigits, GroupSeparator, NegativePattern"
+              },
+              "Type": "Expression"
+            },
+            "7": {
+              "Ident": "StiText",
+              "Name": "Text17",
+              "Guid": "fb4730315780040aa7a75e458b01f5dc",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "1.8,0,3.4,0.6",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{TotalRemain}"
+              },
+              "VertAlignment": "Center",
+              "Font": "IRANSansFaNum;10;;",
+              "Border": "All;110,110,110;;;;;true;solid:0,0,0",
+              "Brush": "solid:Transparent",
+              "TextBrush": "solid:10,10,10",
+              "TextOptions": {
+                "RightToLeft": true,
+                "WordWrap": true
+              },
+              "TextQuality": "Wysiwyg",
+              "Margins": {
+                "Left": 4,
+                "Right": 4,
+                "Top": 0,
+                "Bottom": 0
+              },
+              "TextFormat": {
+                "Ident": "StiNumberFormatService",
+                "NegativePattern": 0,
+                "DecimalDigits": 0,
+                "GroupSeparator": ",",
+                "State": "DecimalDigits, GroupSeparator, NegativePattern"
+              },
+              "Type": "Expression"
             }
           },
-          "DataSourceName": "UnitBillingPerUnit",
+          "DataSourceName": "UnitBillingBriefly",
           "FilterMode": "Or",
           "EvenStyle": "Gray 25%_Data1_Even Style",
           "OddStyle": "Gray 25%_Data1_Odd Style"
@@ -892,83 +1106,12 @@
         "4": {
           "Ident": "StiGroupFooterBand",
           "Name": "GroupFooterBand1",
-          "ClientRectangle": "0,6.5,20,0.6",
+          "ClientRectangle": "0,6.5,20,0",
           "Interaction": {
             "Ident": "StiInteraction"
           },
           "Border": ";;;;;;;solid:Black",
-          "Brush": "solid:Transparent",
-          "Components": {
-            "0": {
-              "Ident": "StiText",
-              "Name": "Text3",
-              "Guid": "269fe311cd196f94fa7532b619ea15b6",
-              "CanGrow": true,
-              "GrowToHeight": true,
-              "ClientRectangle": "0,0,3.6,0.6",
-              "Interaction": {
-                "Ident": "StiInteraction"
-              },
-              "Text": {
-                "Value": "{UnitBillingPerUnit.Remain}"
-              },
-              "VertAlignment": "Center",
-              "Font": "IRANSansFaNum;10;;",
-              "Border": "All;110,110,110;;;;;true;solid:0,0,0",
-              "Brush": "solid:Transparent",
-              "TextBrush": "solid:10,10,10",
-              "TextOptions": {
-                "RightToLeft": true,
-                "WordWrap": true
-              },
-              "TextQuality": "Wysiwyg",
-              "Margins": {
-                "Left": 4,
-                "Right": 4,
-                "Top": 0,
-                "Bottom": 0
-              },
-              "TextFormat": {
-                "Ident": "StiNumberFormatService",
-                "NegativePattern": 0,
-                "DecimalDigits": 0,
-                "GroupSeparator": ",",
-                "State": "DecimalDigits, GroupSeparator, NegativePattern"
-              },
-              "Type": "DataColumn"
-            },
-            "1": {
-              "Ident": "StiText",
-              "Name": "Text4",
-              "Guid": "e91f5e2b7801c3ac321e2114db7a73f5",
-              "CanGrow": true,
-              "GrowToHeight": true,
-              "ClientRectangle": "3.6,0,16.4,0.6",
-              "Interaction": {
-                "Ident": "StiInteraction"
-              },
-              "Text": {
-                "Value": "مانده نهایی({IIF(UnitBillingPerUnit.Remain == 0,BalancedStr,IIF(UnitBillingPerUnit.Remain>0,Credit,Debit))})"
-              },
-              "VertAlignment": "Center",
-              "Font": "IRANSansFaNum;10;;",
-              "Border": "All;110,110,110;;;;;true;solid:0,0,0",
-              "Brush": "solid:Transparent",
-              "TextBrush": "solid:10,10,10",
-              "TextOptions": {
-                "RightToLeft": true,
-                "WordWrap": true
-              },
-              "TextQuality": "Wysiwyg",
-              "Margins": {
-                "Left": 4,
-                "Right": 4,
-                "Top": 0,
-                "Bottom": 0
-              },
-              "Type": "Expression"
-            }
-          }
+          "Brush": "solid:Transparent"
         }
       },
       "PageWidth": 21,

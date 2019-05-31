@@ -3,9 +3,9 @@
   "ReportGuid": "6e3de26c297965c9eda44b6d2095c6d2",
   "ReportName": "Report",
   "ReportAlias": "Report",
-  "ReportFile": "31EF1E4C-86CF-439E-B0C0-0BDEE29DD4F6.json.mrt",
-  "ReportCreated": "/Date(144000000+0330)/",
-  "ReportChanged": "/Date(144000000+0330)/",
+  "ReportFile": "958E1C35-01D2-443D-9E7E-2AA2B4781EDF.json.mrt",
+  "ReportCreated": "/Date(156600000+0330)/",
+  "ReportChanged": "/Date(156600000+0330)/",
   "EngineVersion": "EngineV2",
   "CalculationMode": "Interpretation",
   "ReportUnit": "Centimeters",
@@ -260,7 +260,7 @@
         "Category": "Local"
       },
       "2": {
-        "Value": "بستانکار",
+        "Value": "موجودی منفی",
         "Name": "Credit",
         "DialogInfo": {
           "DateTimeType": "DateAndTime"
@@ -271,7 +271,7 @@
         "Category": "Local"
       },
       "3": {
-        "Value": "بدهکار",
+        "Value": "موجودی مثبت",
         "Name": "Debit",
         "DialogInfo": {
           "DateTimeType": "DateAndTime"
@@ -282,7 +282,7 @@
         "Category": "Local"
       },
       "4": {
-        "Value": "تاریخ: بین 1398/03/12 الی 1398/03/12",
+        "Value": "تاریخ: بین 1398/03/10 الی 1398/03/10",
         "Name": "DomainsDescription",
         "Alias": "DomainsDescription",
         "Type": "System.String",
@@ -307,43 +307,43 @@
     "DataSources": {
       "0": {
         "Ident": "StiDataTableSource",
-        "Name": "UnitBillingPerUnit",
-        "Alias": "UnitBillingPerUnit",
+        "Name": "Core",
+        "Alias": "Core",
         "Columns": {
           "0": {
+            "Name": "Date",
+            "Index": -1,
+            "NameInSource": "Date",
+            "Alias": "Date",
+            "Type": "System.String"
+          },
+          "1": {
             "Name": "AccountingDocumentBodyId",
             "Index": -1,
             "NameInSource": "AccountingDocumentBodyId",
             "Alias": "AccountingDocumentBodyId",
             "Type": "System.Decimal"
           },
-          "1": {
-            "Name": "UnitId",
+          "2": {
+            "Name": "CreditAmount",
             "Index": -1,
-            "NameInSource": "UnitId",
-            "Alias": "UnitId",
+            "NameInSource": "CreditAmount",
+            "Alias": "CreditAmount",
             "Type": "System.Decimal"
           },
-          "2": {
-            "Name": "UnitNumber",
-            "Index": -1,
-            "NameInSource": "UnitNumber",
-            "Alias": "UnitNumber",
-            "Type": "System.String"
-          },
           "3": {
-            "Name": "UnitDescription",
+            "Name": "DebitAmount",
             "Index": -1,
-            "NameInSource": "UnitDescription",
-            "Alias": "UnitDescription",
-            "Type": "System.String"
+            "NameInSource": "DebitAmount",
+            "Alias": "DebitAmount",
+            "Type": "System.Decimal"
           },
           "4": {
-            "Name": "Date",
+            "Name": "Remain",
             "Index": -1,
-            "NameInSource": "Date",
-            "Alias": "Date",
-            "Type": "System.String"
+            "NameInSource": "Remain",
+            "Alias": "Remain",
+            "Type": "System.Decimal"
           },
           "5": {
             "Name": "Description",
@@ -351,30 +351,9 @@
             "NameInSource": "Description",
             "Alias": "Description",
             "Type": "System.String"
-          },
-          "6": {
-            "Name": "Credit",
-            "Index": -1,
-            "NameInSource": "Credit",
-            "Alias": "Credit",
-            "Type": "System.Decimal"
-          },
-          "7": {
-            "Name": "Debit",
-            "Index": -1,
-            "NameInSource": "Debit",
-            "Alias": "Debit",
-            "Type": "System.Decimal"
-          },
-          "8": {
-            "Name": "Remain",
-            "Index": -1,
-            "NameInSource": "Remain",
-            "Alias": "Remain",
-            "Type": "System.Decimal"
           }
         },
-        "NameInSource": "UnitBillingPerUnit.UnitBillingPerUnit"
+        "NameInSource": "Core.Core"
       }
     }
   },
@@ -409,7 +388,7 @@
               },
               "Editable": true,
               "Text": {
-                "Value": "صورتحساب واحد"
+                "Value": "ورودی،خروجی صندوق"
               },
               "HorAlignment": "Center",
               "VertAlignment": "Center",
@@ -483,9 +462,6 @@
               "Interaction": {
                 "Ident": "StiInteraction"
               },
-              "Text": {
-                "Value": "واحد شماره : {UnitBillingPerUnit.UnitNumber}"
-              },
               "VertAlignment": "Center",
               "Font": "IRANSansFaNum;10;;",
               "Border": "All;110,110,110;;;;;true;solid:0,0,0",
@@ -509,7 +485,7 @@
           "NewPageBefore": true,
           "PrintOnAllPages": true,
           "Condition": {
-            "Value": "{UnitBillingPerUnit.UnitId}"
+            "Value": "{Core.UnitId}"
           }
         },
         "2": {
@@ -524,7 +500,7 @@
           "Components": {
             "0": {
               "Ident": "StiText",
-              "Name": "HeaderTextUnitBillingPerUnit2",
+              "Name": "HeaderTextCore2",
               "Guid": "61e17219b67b339598056e5bcbe2107f",
               "CanGrow": true,
               "GrowToHeight": true,
@@ -548,7 +524,7 @@
             },
             "1": {
               "Ident": "StiText",
-              "Name": "HeaderTextUnitBillingPerUnit3",
+              "Name": "HeaderTextCore3",
               "Guid": "bbb4f8558f62545a916a7734b2384d4b",
               "CanGrow": true,
               "GrowToHeight": true,
@@ -572,7 +548,7 @@
             },
             "2": {
               "Ident": "StiText",
-              "Name": "HeaderTextUnitBillingPerUnit4",
+              "Name": "HeaderTextCore4",
               "Guid": "f2ebf4c4b6289743525c6ecc4d1e1599",
               "CanGrow": true,
               "GrowToHeight": true,
@@ -596,7 +572,7 @@
             },
             "3": {
               "Ident": "StiText",
-              "Name": "HeaderTextUnitBillingPerUnit5",
+              "Name": "HeaderTextCore5",
               "Guid": "fcc9b6c57fd6a608559c8aab082bf98b",
               "CanGrow": true,
               "GrowToHeight": true,
@@ -620,7 +596,7 @@
             },
             "4": {
               "Ident": "StiText",
-              "Name": "HeaderTextUnitBillingPerUnit6",
+              "Name": "HeaderTextCore6",
               "Guid": "ca3bd4d3f36bfa3cd96ae68033efe30c",
               "CanGrow": true,
               "GrowToHeight": true,
@@ -644,7 +620,7 @@
             },
             "5": {
               "Ident": "StiText",
-              "Name": "HeaderTextUnitBillingPerUnit1",
+              "Name": "HeaderTextCore1",
               "Guid": "3553de98b9ec4db62eda7106dc61648c",
               "CanGrow": true,
               "GrowToHeight": true,
@@ -671,7 +647,7 @@
         },
         "3": {
           "Ident": "StiDataBand",
-          "Name": "DataUnitBillingPerUnit",
+          "Name": "DataCore",
           "ClientRectangle": "0,5.1,20,0.6",
           "Interaction": {
             "Ident": "StiBandInteraction"
@@ -681,7 +657,7 @@
           "Components": {
             "0": {
               "Ident": "StiText",
-              "Name": "DataTextUnitBillingPerUnit2",
+              "Name": "DataTextCore2",
               "Guid": "171d50f97629115a4d21300ebf0ea5d7",
               "CanGrow": true,
               "GrowToHeight": true,
@@ -690,7 +666,7 @@
                 "Ident": "StiInteraction"
               },
               "Text": {
-                "Value": "{UnitBillingPerUnit.Debit}"
+                "Value": "{Core.DebitAmount}"
               },
               "VertAlignment": "Center",
               "Font": "IRANSansFaNum;10;;",
@@ -714,11 +690,12 @@
                 "DecimalDigits": 0,
                 "GroupSeparator": ",",
                 "State": "DecimalDigits, GroupSeparator, NegativePattern"
-              }
+              },
+              "Type": "DataColumn"
             },
             "1": {
               "Ident": "StiText",
-              "Name": "DataTextUnitBillingPerUnit3",
+              "Name": "DataTextCore3",
               "Guid": "27a69d4ae0d28d7e5026c6fa6c1d1231",
               "CanGrow": true,
               "GrowToHeight": true,
@@ -727,7 +704,7 @@
                 "Ident": "StiInteraction"
               },
               "Text": {
-                "Value": "{UnitBillingPerUnit.Credit}"
+                "Value": "{Core.CreditAmount}"
               },
               "VertAlignment": "Center",
               "Font": "IRANSansFaNum;10;;",
@@ -751,11 +728,12 @@
                 "DecimalDigits": 0,
                 "GroupSeparator": ",",
                 "State": "DecimalDigits, GroupSeparator, NegativePattern"
-              }
+              },
+              "Type": "DataColumn"
             },
             "2": {
               "Ident": "StiText",
-              "Name": "DataTextUnitBillingPerUnit4",
+              "Name": "DataTextCore4",
               "Guid": "920f900505e2a9b3939181f3ac24471a",
               "CanGrow": true,
               "GrowToHeight": true,
@@ -764,7 +742,7 @@
                 "Ident": "StiInteraction"
               },
               "Text": {
-                "Value": "{Persian(UnitBillingPerUnit.Description)}"
+                "Value": "{Persian(Core.Description)}"
               },
               "VertAlignment": "Center",
               "Font": "IRANSansFaNum;10;;",
@@ -786,7 +764,7 @@
             },
             "3": {
               "Ident": "StiText",
-              "Name": "DataTextUnitBillingPerUnit5",
+              "Name": "DataTextCore5",
               "Guid": "073506850e4ee787b6e68c893a13517c",
               "CanGrow": true,
               "GrowToHeight": true,
@@ -795,7 +773,7 @@
                 "Ident": "StiInteraction"
               },
               "Text": {
-                "Value": "{Persian(MiladiDateToPersianDateStr(UnitBillingPerUnit.Date))}"
+                "Value": "{Persian(MiladiDateToPersianDateStr(Core.Date))}"
               },
               "VertAlignment": "Center",
               "Font": "IRANSansFaNum;10;;",
@@ -817,7 +795,7 @@
             },
             "4": {
               "Ident": "StiText",
-              "Name": "DataTextUnitBillingPerUnit6",
+              "Name": "DataTextCore6",
               "Guid": "31ef9b28f0e61c9897515567801ce745",
               "CanGrow": true,
               "GrowToHeight": true,
@@ -848,7 +826,7 @@
             },
             "5": {
               "Ident": "StiText",
-              "Name": "DataTextUnitBillingPerUnit1",
+              "Name": "DataTextCore1",
               "Guid": "c8007f6c98ffadff48f74f5459e45e2e",
               "CanGrow": true,
               "GrowToHeight": true,
@@ -857,7 +835,7 @@
                 "Ident": "StiInteraction"
               },
               "Text": {
-                "Value": "{UnitBillingPerUnit.Remain}"
+                "Value": "{Core.Remain}"
               },
               "VertAlignment": "Center",
               "Font": "IRANSansFaNum;10;;",
@@ -884,7 +862,7 @@
               }
             }
           },
-          "DataSourceName": "UnitBillingPerUnit",
+          "DataSourceName": "Core",
           "FilterMode": "Or",
           "EvenStyle": "Gray 25%_Data1_Even Style",
           "OddStyle": "Gray 25%_Data1_Odd Style"
@@ -910,7 +888,7 @@
                 "Ident": "StiInteraction"
               },
               "Text": {
-                "Value": "{UnitBillingPerUnit.Remain}"
+                "Value": "{Core.Remain}"
               },
               "VertAlignment": "Center",
               "Font": "IRANSansFaNum;10;;",
@@ -948,7 +926,7 @@
                 "Ident": "StiInteraction"
               },
               "Text": {
-                "Value": "مانده نهایی({IIF(UnitBillingPerUnit.Remain == 0,BalancedStr,IIF(UnitBillingPerUnit.Remain>0,Credit,Debit))})"
+                "Value": "مانده نهایی({IIF(Core.Remain == 0,BalancedStr,IIF(Core.Remain>0,Credit,Debit))})"
               },
               "VertAlignment": "Center",
               "Font": "IRANSansFaNum;10;;",
