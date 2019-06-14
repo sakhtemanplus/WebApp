@@ -1,11 +1,11 @@
 {
   "ReportVersion": "2019.1.1",
-  "ReportGuid": "cfa65af695aacd1301c29b8947217cfd",
+  "ReportGuid": "5947416c643ceb1c446b41b355f6006f",
   "ReportName": "Report",
   "ReportAlias": "Report",
   "ReportFile": "254655D6-FC7E-45ED-A276-1753CB2D5090.json.mrt",
-  "ReportCreated": "/Date(307800000+0330)/",
-  "ReportChanged": "/Date(307800000+0330)/",
+  "ReportCreated": "/Date(333000000+0330)/",
+  "ReportChanged": "/Date(333000000+0330)/",
   "EngineVersion": "EngineV2",
   "CalculationMode": "Interpretation",
   "ReportUnit": "Centimeters",
@@ -318,20 +318,26 @@
         "Category": "Local"
       },
       "7": {
-        "Value": "تاریخ: بین 1398/04/04 الی 1398/04/04",
         "Name": "DomainsDescription",
         "Alias": "DomainsDescription",
         "Type": "System.String",
         "Category": "report"
       },
       "8": {
-        "Value": "1398/03/10",
+        "Value": "1398/03/24",
         "Name": "PrintDate",
         "Alias": "print Date (execution date)",
         "Type": "System.String",
         "Category": "report"
       },
       "9": {
+        "Value": "لطفا مبلغ را به شماره کارت 6274121161096441 بنام بیژن قاسمی واریز بفرمائید.",
+        "Name": "BillingFooterMessage",
+        "Alias": "footer message (specify in option)",
+        "Type": "System.String",
+        "Category": "report"
+      },
+      "10": {
         "Value": "ریال",
         "Name": "CurrencyName",
         "Alias": "CurrencyName",
@@ -1106,12 +1112,52 @@
         "4": {
           "Ident": "StiGroupFooterBand",
           "Name": "GroupFooterBand1",
-          "ClientRectangle": "0,6.5,20,0",
+          "ClientRectangle": "0,6.5,20,0.8",
           "Interaction": {
             "Ident": "StiInteraction"
           },
           "Border": ";;;;;;;solid:Black",
-          "Brush": "solid:Transparent"
+          "Brush": "solid:Transparent",
+          "Components": {
+            "0": {
+              "Ident": "StiText",
+              "Name": "Text3",
+              "Guid": "6c22812d0bdfdfb4b506fcc7b73c6711",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "0,0,20,0.8",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{BillingFooterMessage}"
+              },
+              "VertAlignment": "Center",
+              "Font": "IRANSansFaNum;10;;",
+              "Border": ";110,110,110;;;;;true;solid:0,0,0",
+              "Brush": "solid:Transparent",
+              "TextBrush": "solid:10,10,10",
+              "TextOptions": {
+                "RightToLeft": true,
+                "WordWrap": true
+              },
+              "TextQuality": "Wysiwyg",
+              "Margins": {
+                "Left": 4,
+                "Right": 4,
+                "Top": 0,
+                "Bottom": 0
+              },
+              "TextFormat": {
+                "Ident": "StiNumberFormatService",
+                "NegativePattern": 0,
+                "DecimalDigits": 0,
+                "GroupSeparator": ",",
+                "State": "DecimalDigits, GroupSeparator, NegativePattern"
+              },
+              "Type": "Expression"
+            }
+          }
         }
       },
       "PageWidth": 21,

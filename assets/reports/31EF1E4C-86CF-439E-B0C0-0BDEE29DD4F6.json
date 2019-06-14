@@ -1,11 +1,11 @@
 {
   "ReportVersion": "2019.1.1",
-  "ReportGuid": "6e3de26c297965c9eda44b6d2095c6d2",
+  "ReportGuid": "0178355e058986ef913a54b3525e570f",
   "ReportName": "Report",
   "ReportAlias": "Report",
   "ReportFile": "31EF1E4C-86CF-439E-B0C0-0BDEE29DD4F6.json.mrt",
-  "ReportCreated": "/Date(144000000+0330)/",
-  "ReportChanged": "/Date(144000000+0330)/",
+  "ReportCreated": "/Date(156600000+0330)/",
+  "ReportChanged": "/Date(156600000+0330)/",
   "EngineVersion": "EngineV2",
   "CalculationMode": "Interpretation",
   "ReportUnit": "Centimeters",
@@ -282,20 +282,26 @@
         "Category": "Local"
       },
       "4": {
-        "Value": "تاریخ: بین 1398/03/12 الی 1398/03/12",
         "Name": "DomainsDescription",
         "Alias": "DomainsDescription",
         "Type": "System.String",
         "Category": "report"
       },
       "5": {
-        "Value": "1398/03/10",
+        "Value": "1398/03/24",
         "Name": "PrintDate",
         "Alias": "print Date (execution date)",
         "Type": "System.String",
         "Category": "report"
       },
       "6": {
+        "Value": "لطفا مبلغ را به شماره کارت 6274121161096441 بنام بیژن قاسمی واریز بفرمائید.",
+        "Name": "BillingFooterMessage",
+        "Alias": "footer message (specify in option)",
+        "Type": "System.String",
+        "Category": "report"
+      },
+      "7": {
         "Value": "ریال",
         "Name": "CurrencyName",
         "Alias": "CurrencyName",
@@ -948,7 +954,7 @@
                 "Ident": "StiInteraction"
               },
               "Text": {
-                "Value": "مانده نهایی({IIF(UnitBillingPerUnit.Remain == 0,BalancedStr,IIF(UnitBillingPerUnit.Remain>0,Credit,Debit))})"
+                "Value": "مانده نهایی({IIF(UnitBillingPerUnit.Remain == 0,BalancedStr,IIF(UnitBillingPerUnit.Remain>0,Credit,Debit))})\r\n{IIF(UnitBillingPerUnit.Remain>=0,\"\",BillingFooterMessage)}"
               },
               "VertAlignment": "Center",
               "Font": "IRANSansFaNum;10;;",

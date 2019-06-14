@@ -1,4 +1,4 @@
 {  
-  "remoteServiceBaseUrl": "https://dev.splus.sakhtemanplus.com",
-  "appBaseUrl": "https://sakhtemanplus.github.io/WebApp"
+  "remoteServiceBaseUrl": "http://localhost:5000",
+  "appBaseUrl": "http://localhost:4200"
 }
