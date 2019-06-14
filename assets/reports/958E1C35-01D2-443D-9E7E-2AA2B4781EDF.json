@@ -1,11 +1,11 @@
 {
   "ReportVersion": "2019.1.1",
-  "ReportGuid": "6e3de26c297965c9eda44b6d2095c6d2",
+  "ReportGuid": "0eaab97d581d7d08ae423a1cf0fc933a",
   "ReportName": "Report",
   "ReportAlias": "Report",
   "ReportFile": "958E1C35-01D2-443D-9E7E-2AA2B4781EDF.json.mrt",
-  "ReportCreated": "/Date(156600000+0330)/",
-  "ReportChanged": "/Date(156600000+0330)/",
+  "ReportCreated": "/Date(207000000+0330)/",
+  "ReportChanged": "/Date(207000000+0330)/",
   "EngineVersion": "EngineV2",
   "CalculationMode": "Interpretation",
   "ReportUnit": "Centimeters",
@@ -282,14 +282,13 @@
         "Category": "Local"
       },
       "4": {
-        "Value": "تاریخ: بین 1398/03/10 الی 1398/03/10",
         "Name": "DomainsDescription",
         "Alias": "DomainsDescription",
         "Type": "System.String",
         "Category": "report"
       },
       "5": {
-        "Value": "1398/03/10",
+        "Value": "1398/03/12",
         "Name": "PrintDate",
         "Alias": "print Date (execution date)",
         "Type": "System.String",
@@ -438,6 +437,25 @@
               "TextOptions": {
                 "WordWrap": true
               },
+              "Type": "Expression"
+            },
+            "3": {
+              "Ident": "StiText",
+              "Name": "Text6",
+              "Guid": "8a551be0a1c941c359b14e8ab44e93b6",
+              "ClientRectangle": "14.7,0.1,5.2,0.4",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "چاپ:{PrintDate}"
+              },
+              "HorAlignment": "Right",
+              "VertAlignment": "Center",
+              "Font": "IRANSansFaNum;10;;",
+              "Border": ";110,110,110;;;;;;solid:Black",
+              "Brush": "solid:Transparent",
+              "TextBrush": "solid:10,10,10",
               "Type": "Expression"
             }
           }
